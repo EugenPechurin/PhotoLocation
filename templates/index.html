@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!-- app's own CSS -->
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='jquery.sf-flash.css') }}" rel="stylesheet"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+        <!-- https://developers.google.com/maps/documentation/javascript/ -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSGeJhzs-P1lZoLoLfhdDaMEV0Oi8x2c8&language=uk&v=3.exp"></script>
+
+        <!-- http://jquery.com/ -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- http://getbootstrap.com/ -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- https://github.com/corejavascript/typeahead.js/blob/master/doc/jquery_typeahead.md -->
+        <script src="https://cdn.rawgit.com/corejavascript/typeahead.js/master/dist/typeahead.jquery.js"></script>
+
+        <!-- http://handlebarsjs.com/ -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+
+        <!-- app's own JavaScript -->
+        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+        <script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+        <script src="{{ url_for('static', filename='infobubble.js') }}"></script>
+        <script src="{{ url_for('static', filename='jquery.sf-flash.js') }}"></script>
+
+
+        <title>PhotoLocation</title>
+
+    </head>
+    <body>
+            <div id="map-canvas" class="dropzone"></div>
+
+         <!-- fill viewport -->
+        <div class="container-fluid">
+
+        <nav class="navbar navbar-inverse bg-inverse">
+  <div class="container">
+      <a class="navbar-brand brand" data-toggle="modal" href="#about">PhotoLocation</a>
+        <button class="btn btn-default navbar-btn navbar-right" id="upload-file-btn" type="button" >Add photo</button>
+
+    </div>
+
+</nav>
+
+<div class="progress" >
+  <div id="progressbars" class="progress-bar" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+  </div>
+    </body>
+
+    <!-- Modal About -->
+<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">About</h4>
+        </button>
+      </div>
+      <div class="modal-body">
+        This application for determining the location of GPS coordinates where the photo was creted.<p>
+    Drag and drop your photo on the map.
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

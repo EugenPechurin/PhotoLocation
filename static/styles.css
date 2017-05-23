@@ -1,0 +1,149 @@
+/* allow map to fill viewport */
+html, body, #map-canvas, .container-fluid
+{
+    /* height of these elements */
+    height: 100%;
+
+    /* no margin around these elements */
+    margin: 0;
+
+    /* disable scrollbars */
+    overflow: hidden;
+
+    /* no padding within these elements */
+    padding: 0;
+}
+
+/* center form */
+#form
+{
+    /* position form "absolutely" where we want it */
+    position: absolute;
+
+    /* distance from top edge of viewport */
+    top: 28px;
+
+    /* form's width */
+    width: 100%;
+}
+#form .form-group
+{
+    /* block-level flex container */
+    display: flex;
+
+    /* center container's content */
+    justify-content: center;
+}
+
+/* stylize text box */
+#q
+{
+    /* override typeahead.js's transparent background */
+    background-color: #ffffff !important;
+
+    /* text box's width */
+    width: 300px;
+}
+
+/* stylize info window */
+#info
+{
+    /* no margin around this element */
+    margin: 0;
+
+    /* allow scrollbars as needed */
+    overflow: auto;
+}
+#info ul
+{
+    margin-bottom: 0;
+}
+
+/* stylize typeahead.js a la http://twitter.github.io/typeahead.js/css/examples.css */
+.tt-menu
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 1px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 300px;
+}
+.tt-suggestion.tt-cursor {
+    background-color: #0097cf;
+    color: #fff;
+    cursor: pointer;
+}
+.tt-suggestion {
+    margin: 0;
+    padding: 6px 12px;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    background-color: rgba(0,0,0,0.7);
+    border-width: 0px;
+    border-color: rgba(0,0,0,0);
+}
+.dz-upload { 
+    display: block; 
+    background-color: red; 
+    height: 10px;
+    width: 0%;
+}
+.progress {
+    position: absolute;
+    width: 99.6%;
+    height: 3px;
+    top: 48px;
+    left: 2px;
+    background-color: rgba(0,0,0,0);
+    color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+.alert {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    margin : -150px;
+    z-index : 5;
+}
+
+#status-area .flash_message {
+    position: absolute;
+    top : 100px;
+    padding: 5px;
+    color: green;
+}
+
+.btn-default {
+    background-color: transparent;
+    color: #fff;
+    border-color: #919191;
+}
+
+.btn-default:hover {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.btn-default:focus {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.brand {
+    color: white !important;
+}
+
+.brand:hover {
+    color: #d8d8d8 !important;
+}
+
+.btn-default:active {
+    background-color: #2b2b2b!important;
+    color: white!important;
+}

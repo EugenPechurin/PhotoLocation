@@ -1,2 +1,2 @@
 # PhotoLocation
-Django-Photolocation
+Flask-Photolocation
